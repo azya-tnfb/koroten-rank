@@ -57,17 +57,9 @@ canvas {
 }
 
 #ui-layer {
-    position: fixed;
-    top: 15%;
-    left: calc(8% + 100px);
-    /* 右に100pxずらす */
-    right: auto;
-    /* Reset previous styles */
+    /* コンテナとしての位置指定は解除し、子要素で個別指定 */
     pointer-events: none;
     z-index: 2500;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 /* ポーズメニュー & オプション画面共通のかわいいスタイル */
@@ -150,26 +142,26 @@ input[type=range] {
 }
 
 #score-display {
+    position: fixed;
+    top: 15%;
+    left: calc(8% + 100px);
     font-size: 2rem;
     font-weight: bold;
     color: var(--text-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2500;
 }
 
 #next-fruit-display {
-    margin-top: 20px;
-    background: var(--ui-bg);
-    padding: 10px;
-    border-radius: 8px;
-    backdrop-filter: blur(5px);
+    position: fixed;
+    top: calc(15% + 110px);
+    /* SCOREの下に配置 */
+    left: calc(8% + 100px);
+    /* 右に100px */
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 50px;
-    /* Separate Next from Score */
-    right: 20px;
-    /* Align within its container */
+    z-index: 2500;
 }
 
 .next-label {
@@ -180,9 +172,11 @@ input[type=range] {
     margin-bottom: 5px;
 }
 
+/* NEXTアイコンを大きく */
 #next-fruit-preview {
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    /* 120px -> 150px (+30px) */
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -645,13 +639,14 @@ button:active {
     flex-direction: column;
     align-items: center;
     background: rgba(135, 206, 235, 0.6);
-    /* スカイブルー、進化ルートと同じ */
     padding: 10px 20px;
     border-radius: 8px;
     backdrop-filter: blur(5px);
     position: fixed;
-    top: 5%;
-    left: 3%;
+    top: 15%;
+    /* ベース位置 */
+    left: calc(8% + 150px);
+    /* 右に150px */
     z-index: 2500;
 }
 
