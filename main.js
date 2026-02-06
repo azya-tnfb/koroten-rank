@@ -1,4 +1,4 @@
-import { FRUITS as DEFAULT_FRUITS, PHYSICS_SETTINGS, GAME_SETTINGS } from './constants.js';
+import { FRUITS as DEFAULT_FRUITS, PHYSICS_SETTINGS, GAME_SETTINGS } from './constants.js?v=3';
 import { initCustomize, openCustomize, getCustomFruits } from './customize.js';
 
 // カスタマイズされたFRUITS配列を使用
