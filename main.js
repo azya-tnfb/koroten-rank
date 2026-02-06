@@ -50,7 +50,7 @@ const pauseSeSlider = document.getElementById('pause-se-volume');
 // Audio Elements
 const bgm = new Audio('assets/audio/bgm/Hmm.-Tasty.wav');
 bgm.loop = true;
-bgm.volume = 0.1; // BGMは控えめに（0.3 → 0.1）
+bgm.volume = 0.05; // BGMは控えめに（5%）
 
 const seRelease = new Audio('assets/audio/se/release.mp3');
 seRelease.volume = 0.2; // 0.5 → 0.2
