@@ -20,7 +20,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
+    /* hidden -> auto: 画面外のUIが見えるようにスクロール可能に */
 }
 
 #game-container {
