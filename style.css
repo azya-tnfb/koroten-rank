@@ -162,6 +162,10 @@ input[type=range] {
     flex-direction: column;
     align-items: center;
     z-index: 2500;
+    transform: scale(1.5);
+    /* 全体を1.5倍に拡大 */
+    transform-origin: top center;
+    /* 拡大の基準点を上中央に */
 }
 
 .next-label {
@@ -175,7 +179,6 @@ input[type=range] {
 /* NEXTアイコンを大きく */
 #next-fruit-preview {
     width: 150px;
-    /* 120px -> 150px (+30px) */
     height: 150px;
     display: flex;
     justify-content: center;
@@ -645,8 +648,8 @@ button:active {
     position: fixed;
     top: 15%;
     /* ベース位置 */
-    left: calc(8% + 150px);
-    /* 右に150px */
+    left: calc(8% + 100px);
+    /* 150px -> 100px (左に50px移動) */
     z-index: 2500;
 }
 
