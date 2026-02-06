@@ -59,7 +59,8 @@ canvas {
 #ui-layer {
     position: fixed;
     top: 15%;
-    left: 8%;
+    left: calc(8% + 100px);
+    /* 右に100pxずらす */
     right: auto;
     /* Reset previous styles */
     pointer-events: none;
@@ -192,7 +193,8 @@ input[type=range] {
 #evolution-container {
     position: fixed;
     top: 50%;
-    right: 5%;
+    right: calc(5% + 100px);
+    /* 左に100pxずらす */
     left: auto;
     transform: translateY(-50%);
     background: rgba(135, 206, 235, 0.7);
@@ -689,7 +691,8 @@ button:active {
 #settings-btn {
     position: fixed;
     top: 5%;
-    right: 3%;
+    right: calc(3% + 100px);
+    /* 左に100pxずらす */
     left: auto;
     bottom: auto;
     width: 50px;
