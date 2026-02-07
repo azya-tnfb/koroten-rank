@@ -58,6 +58,9 @@ seRelease.volume = 0.2; // 0.5 → 0.2
 const seShinka = new Audio('assets/audio/se/shinka.mp3');
 seShinka.volume = 0.2; // 0.6 → 0.2
 
+const seShinka11 = new Audio('assets/audio/se/11shinka.mp3');
+seShinka11.volume = 0.3; // 最終進化は少し大きめ
+
 // BGM自動再生（ユーザー操作後に開始）
 let bgmStarted = false;
 function startBGM() {
@@ -608,9 +611,14 @@ function handleMerge(bodyA, bodyB, currentIdx) {
     const newIdx = currentIdx + 1;
     const newBody = createFruitBody(midX, midY, newIdx);
 
-    // 進化時のSE
-    seShinka.currentTime = 0;
-    seShinka.play().catch(e => console.log('Shinka SE play failed:', e));
+    // 進化時のSE（11番目の進化は特別なSE）
+    if (newIdx === 10) { // 10はインデックス（11番目のボール）
+        seShinka11.currentTime = 0;
+        seShinka11.play().catch(e => console.log('Shinka11 SE play failed:', e));
+    } else {
+        seShinka.currentTime = 0;
+        seShinka.play().catch(e => console.log('Shinka SE play failed:', e));
+    }
 
     // Momentum Cancellation & Pop Effect
     // "Pop": Apply force to neighbors?
