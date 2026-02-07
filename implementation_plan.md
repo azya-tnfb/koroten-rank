@@ -64,6 +64,23 @@ GitHub公開予定のため、コードはクリーンに保つ。
 - [x] **Viewport Settings**
     - Update `meta viewport` to prevent accidental zooming (`user-scalable=no`).
 
+## Phase 5: Online Ranking (Firebase)
+- [ ] **Firebase Setup**
+    - Create Firebase Project (Console).
+    - Add Web App to Project.
+    - Enable Firestore Database (Test Mode for dev).
+    - Get Firebase Config (API Key, etc).
+- [ ] **Implementation**
+    - Install Firebase SDK (CDN).
+    - Initialize Firebase in `firebase-config.js`.
+    - Create `ranking.js` module for Firestore operations (addScore, getRankings).
+- [ ] **UI Integration**
+    - **Game Over**: Add "Register Score" button and Name Input field.
+    - **Ranking Screen**: Update to fetch data from Firestore instead of LocalStorage.
+    - Add loading states/spinners.
+- [ ] **Security Rules**
+    - Basic validation (e.g. score must be number, name length limit).
+
 ## 実装状況（完了済み）
 - [x] 基本的なゲームループと物理演算 (Matter.js)
 - [x] フルーツ（キャラクター）の定義と進化ロジック（11段階）
