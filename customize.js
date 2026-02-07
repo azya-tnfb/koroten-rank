@@ -41,6 +41,7 @@ export const ALL_BALLS = [
     { id: 'yuuri', label: 'ゆうり', folder: 'yuuri', textures: ['yuuri01.png', 'yuuri02.png'] },
     { id: 'shieko', label: 'しえこ', folder: 'shieko', textures: ['shieko01.png', 'shieko02.png'] },
     { id: 'manari', label: 'マナりー', folder: 'manari-', textures: ['manari-01.png', 'manari-02.png'] },
+    { id: 'shia', label: 'シア', folder: 'shia', textures: ['shia01.png', 'shia02.png'] },
 ];
 
 // デフォルトの進化順（11個）
