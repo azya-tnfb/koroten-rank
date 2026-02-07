@@ -6,7 +6,7 @@
     /* ゲームコンテナ: 画面に合わせて縮小 */
     #game-container {
         /* width: 400px なので、画面幅がそれより小さい場合は縮小 */
-        max-width: 100vw;
+        max-width: 95vw;
         height: auto;
         aspect-ratio: 400 / 515;
         /* 中央配置は維持 */
